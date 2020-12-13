@@ -1,4 +1,3 @@
-
 const users =  [
     {
       id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
@@ -85,18 +84,17 @@ const users =  [
       age: 39,
     },
   ];
-// Write code under this line
 
-const getUsersWithGender = (array, gender) => array
-.filter((users)=>gender=== users.gender).map(({name}) =>name);
- console.log(getUsersWithGender(users, 'male'));
+  // Write code under this line
+  const getUsersWithFriend = (array, friendName) => array.filter(({friends}) => friends.includes(friendName)).map(({name}) => name);
 
-/* [
-  "Moore Hensley",
-  "Ross Vazquez",  
-  "Carey Barr",  
-  "Blackburn Dotson"  
-] */
+console.log(getUsersWithFriend(users, 'Briana Decker'));
+// [ 'Sharlene Bush', 'Sheree Anthony' ]
+
+console.log(getUsersWithFriend(users, 'Goldie Gentry'));
+// [ 'Elma Head', 'Sheree Anthony' ]
 
 
-// Получи массив имен пользователей (значение свойства name) по полу (значение свойства gender).
+// Получи массив имен всех пользователей у которых есть друг с заданным именем.
+
+// Используй деструктурирующее присваивание для параметра функции {friends}и ({name}) без пробелов и переносов на новую строку
